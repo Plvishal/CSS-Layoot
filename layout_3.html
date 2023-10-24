@@ -3,20 +3,103 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Layout 3</title>
-    <style></style>
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        width: 100%;
+        height: 100%;
+      }
+      .main_container {
+        display: grid;
+        gap: 10px;
+        padding: 1rem;
+        /* justify-content: center; */
+        /* align-items: center; */
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas:
+          'navigation header header header'
+          'navigation card_1 card_2 card_3'
+          'navigation card_1 card_2 card_4'
+          'navigation footer footer footer';
+        height: 100vh;
+      }
+      .items {
+        background-color: rgb(132, 12, 92);
+        width: 100%;
+        height: 100%;
+        border-radius: 20px;
+        text-align: center;
+        justify-content: center;
+        display: flexbox;
+        /* flex-wrap: wrap; */
+      }
+      #header {
+        grid-area: header;
+        height: 100%;
+        width: 100%;
+      }
+      #navigation {
+        grid-area: navigation;
+        height: 100%;
+        width: 100%;
+      }
+      #card_1 {
+        grid-area: card_1;
+        height: 100%;
+        width: 100%;
+      }
+      #card_2 {
+        grid-area: card_2;
+        height: 100%;
+        width: 100%;
+      }
+      #card_3 {
+        grid-area: card_3;
+        height: 100%;
+        width: 100%;
+      }
+      #card_4 {
+        grid-area: card_4;
+        height: 100%;
+        width: 100%;
+      }
+      #footer {
+        grid-area: footer;
+        height: 100%;
+        width: 100%;
+      }
+      @media only screen and (max-width: 600px) {
+        .main_container {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(7, 1fr);
+          grid-template-areas:
+            'header'
+            'navigation'
+            'card_1'
+            'card_2'
+            'card_3'
+            'card_4'
+            'footer';
+          /* overflow: hidden; */
+        }
+      }
+    </style>
   </head>
   <body>
     <div class="main_container">
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
-      <div class="items"></div>
+      <div class="items" id="header">Header</div>
+      <div class="items" id="navigation">Navigation</div>
+      <div class="items" id="card_1">Card 1</div>
+      <div class="items" id="card_2">Card 2</div>
+      <div class="items" id="card_3">Card 3</div>
+      <div class="items" id="card_4">Card 4</div>
+      <div class="items" id="footer">Footer</div>
     </div>
   </body>
 </html>
