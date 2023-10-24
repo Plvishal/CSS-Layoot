@@ -1,4 +1,7 @@
 # CSS-Layout
+# Layout 6
+![image](https://github.com/Plvishal/CSS-Layout/assets/115453884/8bd08b96-51d7-41c3-ac19-8bacd54c8c1f)
+
 # Layout 5
 ![layout_5](https://github.com/Plvishal/CSS-Layout/assets/115453884/19b6fbcb-fbd6-4778-a03d-e696c94d9346)
 # Layout 4
